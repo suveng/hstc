@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.blgg.permission.modules.sys.dao.RoleDeptMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.blgg.permission.modules.sys.entity.RoleDept">
+        <id column="id" property="id" />
+        <result column="role_id" property="roleId" />
+        <result column="dept_id" property="deptId" />
+    </resultMap>
+
+    <select id="queryDeptIdList" resultType="long">
+        select dept_id from sys_role_dept where role_id in
+        <foreach item="roleId" collection="array" open="(" separator="," close=")">
+            #{roleId}
+        </foreach>
+    </select>
+
+    <delete id="deleteBatch">
+        delete from sys_role_dept where role_id in
+        <foreach item="roleId" collection="array" open="(" separator="," close=")">
+            #{roleId}
+        </foreach>
+    </delete>
+
+</mapper>

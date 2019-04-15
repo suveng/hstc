@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>欢迎页</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="${request.contextPath}/statics/css/bootstrap.min.css">
+    <link rel ="shortcut icon" type="image/x-icon" href="statics/favicon.ico">
+</head>
+<body>
+<div class="panel panel-default">
+    <div class="panel-heading">基本信息</div>
+    <div style="padding: 10px 0 20px 10px;">
+        <h1>&nbsp;&nbsp;&nbsp;项目介绍</h1>
+
+        <h2>项目结构：</h2>
+        <pre>
+        ├─permissions      管理后台
+        │    ├─db  数据库SQL脚本
+        │    │
+        │    ├─modules  模块
+        │    │    ├─job 定时任务
+        │    │    └─sys 系统管理(核心)
+        │    │
+        │    └─resources
+        │        ├─statics  静态资源
+        │        ├─template 系统页面
+        │        │    ├─modules      模块页面
+        │        │    ├─login.html   登录页面
+        │        │    ├─index.html   主页
+        │        └─application.yml   全局配置文件
+        │        └─application.yml   数据源配置文件
+            </pre>
+
+        <ul>
+            <li>采用Spring、MyBatis、Shiro框架，开发的一套通用权限管理方案</li>
+        </ul>
+
+            <h2>技术选型：</h2>
+        <ul>
+            <li>核心框架：Spring Boot 2.0</li>
+            <li>安全框架：Apache Shiro 1.4</li>
+            <li>视图框架：Spring MVC 5.0</li>
+            <li>持久层框架：MyBatis 3.3</li>
+            <li>定时器：Quartz 2.3</li>
+            <li>数据库连接池：Druid 1.1</li>
+            <li>日志管理：SLF4J 1.7、Log4j</li>
+            <li>页面交互：Vue2.x</li>
+        </ul>
+        <h2>软件需求：</h2>
+        <ul>
+            <li>jdk1.8</li>
+            <li>MySQL5.7</li>
+            <li>Maven3.5</li>
+            <li>IntelliJ IDEA</li>
+        </ul>
+
+
+
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+spring:
+  datasource:
+     name: dev
+     url: jdbc:mysql://localhost:3306/blgg_permission?useUnicode=true&characterEncoding=utf8
+     username: root
+     password: root
+
+
